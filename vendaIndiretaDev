@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>VI</title>
+</head>
+<body>
+
+<h2 style="color:#EB640A; font-weight:700; margin-bottom:4px;"> Atendimento - Venda Indireta </h2>
+<p style="color:#4B4B4B; font-size:14px; margin-top:0;"> Toque no ícone de chat no canto inferior direito para iniciar sua conversa. 💬 </p>
+<p style="color:#4B4B4B; font-size:14px; margin-top:0;"> AccountId: </p>
+<p style="color:#4B4B4B; font-size:14px; margin-top:0;"> ContactId: </p>
+    
+<script type='text/javascript'>
+	window.addEventListener("onEmbeddedMessagingReady", () => {
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            AccountId: "",
+            ContactId: ""
+        });
+    });
+	
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'pt_BR';
+
+			embeddedservice_bootstrap.init(
+				'00D890000032JqX',
+				'VendaIndireta',
+				'https://supergasbras--tecnica25.sandbox.my.site.com/ESWVendaIndireta1771247312227',
+				{
+					scrt2URL: 'https://supergasbras--tecnica25.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://supergasbras--tecnica25.sandbox.my.site.com/ESWVendaIndireta1771247312227/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
